@@ -1,0 +1,261 @@
+/* pages/AdminOrders.css */
+.admin-page {
+  padding: var(--space-8) 0 var(--space-20);
+}
+
+.admin-header {
+  margin-bottom: var(--space-8);
+}
+
+.admin-header h1 {
+  font-size: 1.5rem;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.admin-header p {
+  color: var(--gray-500);
+  font-size: 14px;
+}
+
+.admin-filters {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.admin-select,
+.admin-search {
+  padding: 10px 14px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  transition: all var(--transition-fast);
+  background: white;
+}
+
+.admin-select:focus,
+.admin-search:focus {
+  outline: none;
+  border-color: var(--brand-500);
+}
+
+.admin-search {
+  flex: 1;
+  min-width: 240px;
+}
+
+.admin-select {
+  min-width: 180px;
+}
+
+.admin-error {
+  background: var(--error-bg);
+  color: #991b1b;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+  font-size: 14px;
+  border: 1px solid #fecaca;
+}
+
+.admin-empty {
+  text-align: center;
+  padding: var(--space-12) var(--space-4);
+}
+
+.admin-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--gray-100);
+  border-radius: 50%;
+  margin: 0 auto var(--space-4);
+  color: var(--gray-400);
+}
+
+.admin-empty h3 {
+  color: var(--gray-800);
+  margin-bottom: 4px;
+}
+
+.admin-empty p {
+  color: var(--gray-500);
+  font-size: 14px;
+}
+
+.admin-forbidden {
+  text-align: center;
+  padding: var(--space-12) var(--space-4);
+  color: var(--gray-500);
+}
+
+.admin-forbidden h2 {
+  color: var(--error);
+  margin-bottom: 8px;
+}
+
+/* Order Cards */
+.admin-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.admin-order-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-100);
+  transition: all var(--transition-fast);
+}
+
+.admin-order-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.admin-order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.admin-order-header > div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.admin-order-id {
+  font-weight: 700;
+  color: var(--gray-800);
+  font-size: 14px;
+  font-family: monospace;
+}
+
+.admin-order-date {
+  color: var(--gray-400);
+  font-size: 12px;
+}
+
+.admin-order-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+  margin-bottom: var(--space-4);
+}
+
+.admin-customer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.admin-customer strong {
+  color: var(--gray-800);
+  font-size: 14px;
+}
+
+.admin-customer span {
+  color: var(--gray-500);
+  font-size: 12px;
+}
+
+.admin-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.admin-item-tag {
+  background: var(--gray-100);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.admin-total {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--gray-900);
+  text-align: right;
+}
+
+.admin-order-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.admin-status-select {
+  padding: 8px 14px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  background: white;
+  transition: all var(--transition-fast);
+}
+
+.admin-status-select:focus {
+  outline: none;
+  border-color: var(--brand-500);
+}
+
+.admin-status-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--gray-200);
+  border-top-color: var(--brand-600);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Badge overrides */
+.badge-info {
+  background: var(--info-bg);
+  color: #1e40af;
+}
+
+.badge-cancelled {
+  background: var(--error-bg);
+  color: #991b1b;
+}
+
+@media (max-width: 768px) {
+  .admin-order-body {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-total {
+    text-align: left;
+  }
+
+  .admin-filters {
+    flex-direction: column;
+  }
+}

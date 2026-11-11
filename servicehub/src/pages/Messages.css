@@ -1,0 +1,90 @@
+.messages-page { min-height: 70vh; padding: var(--space-10) 0 var(--space-16); background: var(--gray-50); }
+.messages-heading { margin-bottom: 24px; }
+.messages-heading h1 { margin: 4px 0 6px; color: var(--gray-900); }
+.messages-heading p { margin: 0; color: var(--gray-500); }
+.messages-eyebrow { color: var(--brand-600); font-size: 12px; font-weight: 700; letter-spacing: .1em; }
+.messages-error { margin-bottom: 16px; padding: 12px 16px; color: var(--error); background: #fff1f2; border: 1px solid #fecdd3; border-radius: var(--radius-md); }
+.messages-layout { display: grid; grid-template-columns: minmax(280px, 340px) minmax(0, 1fr); height: min(680px, calc(100vh - 250px)); min-height: 440px; overflow: hidden; background: white; border: 1px solid var(--gray-100); border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); }
+.messages-inbox { min-width: 0; overflow-y: auto; border-right: 1px solid var(--gray-100); }
+.messages-inbox-heading { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; background: white; border-bottom: 1px solid var(--gray-100); }
+.messages-inbox-heading h2 { margin: 0; color: var(--gray-900); font-size: 17px; }
+.messages-inbox-heading > span { color: var(--gray-500); font-size: 13px; }
+.messages-conversation-list { display: grid; }
+.messages-conversation-item { display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 16px; text-align: left; background: white; border: 0; border-bottom: 1px solid var(--gray-100); cursor: pointer; }
+.messages-conversation-item:hover, .messages-conversation-item.selected { background: var(--brand-50); }
+.messages-avatar { display: grid; flex: 0 0 42px; width: 42px; height: 42px; place-items: center; color: var(--brand-700); background: var(--brand-100); border-radius: 50%; font-weight: 700; }
+.messages-preview { display: grid; flex: 1; min-width: 0; gap: 4px; }
+.messages-preview-heading { display: flex; justify-content: space-between; gap: 8px; color: var(--gray-900); }
+.messages-preview-heading strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.messages-preview-heading time { flex: 0 0 auto; color: var(--gray-400); font-size: 11px; }
+.messages-service-name { overflow: hidden; color: var(--brand-600); font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.messages-preview-body { overflow: hidden; color: var(--gray-500); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.messages-unread-count { display: grid; flex: 0 0 22px; width: 22px; height: 22px; place-items: center; color: white; background: var(--brand-600); border-radius: 50%; font-size: 11px; font-weight: 700; }
+.messages-empty-inbox, .messages-thread-empty { display: grid; justify-items: center; align-content: center; gap: 10px; padding: 30px; color: var(--gray-500); text-align: center; }
+.messages-empty-inbox .icon, .messages-thread-empty > .icon { color: var(--brand-500); }
+.messages-empty-inbox strong, .messages-thread-empty h2 { margin: 0; color: var(--gray-800); font-size: 16px; }
+.messages-empty-inbox p, .messages-thread-empty p { margin: 0; font-size: 13px; line-height: 1.5; }
+.messages-thread { display: flex; min-width: 0; min-height: 0; flex-direction: column; }
+.messages-thread-heading { display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--gray-100); }
+.messages-thread-heading h2 { margin: 0 0 3px; color: var(--gray-900); font-size: 16px; }
+.messages-thread-heading p { margin: 0; color: var(--gray-500); font-size: 13px; }
+.messages-thread-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.messages-delete-button { display: inline-flex; align-items: center; gap: 6px; padding: 8px 10px; color: #b91c1c; background: white; border: 1px solid #fecaca; border-radius: var(--radius-md); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background .15s ease, border-color .15s ease; }
+.messages-delete-button:hover:not(:disabled) { background: #fef2f2; border-color: #fca5a5; }
+.messages-delete-button:disabled { opacity: .5; cursor: not-allowed; }
+.messages-report-button { display: inline-flex; align-items: center; gap: 6px; padding: 8px 10px; color: #9f1239; background: white; border: 1px solid #fecdd3; border-radius: var(--radius-md); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background .15s ease; }
+.messages-report-button:hover:not(:disabled) { background: #fff1f2; }
+.messages-report-button:disabled { opacity: .5; cursor: not-allowed; }
+.messages-item-delete-btn { display: none; align-items: center; justify-content: center; width: 28px; height: 28px; margin-left: 4px; padding: 0; color: var(--gray-400); background: transparent; border: 0; border-radius: var(--radius-sm); cursor: pointer; flex-shrink: 0; transition: color .15s, background .15s; }
+.messages-conversation-item:hover .messages-item-delete-btn, .messages-conversation-item:focus-within .messages-item-delete-btn { display: flex; }
+.messages-item-delete-btn:hover { color: #dc2626; background: #fee2e2; }
+.message-bubble-footer { display: flex; align-items: center; justify-content: flex-end; gap: 6px; margin-top: 5px; }
+.message-bubble-footer time { margin: 0; font-size: 10px; opacity: .72; }
+.message-delete-action { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; padding: 0; color: rgba(255, 255, 255, .7); background: transparent; border: 0; border-radius: 3px; cursor: pointer; transition: color .15s ease, background .15s ease; }
+.message-delete-action:hover { color: #fff; background: rgba(0, 0, 0, .2); }
+.message-bubble.theirs .message-delete-action { color: var(--gray-400); }
+.message-bubble.theirs .message-delete-action:hover { color: #dc2626; background: rgba(0, 0, 0, .05); }
+.delete-dialog-icon { color: #dc2626 !important; background: #fee2e2 !important; }
+.delete-confirm-btn { background: #dc2626 !important; border-color: #dc2626 !important; color: white !important; }
+.delete-confirm-btn:hover { background: #b91c1c !important; border-color: #b91c1c !important; }
+.messages-history { display: flex; flex: 1; min-height: 0; flex-direction: column; align-items: flex-start; gap: 12px; overflow-y: auto; padding: 22px; }
+.messages-thread-empty-copy { align-self: center; margin: auto; color: var(--gray-500); text-align: center; }
+.message-bubble { max-width: min(78%, 560px); padding: 11px 14px 8px; border-radius: 16px; }
+.message-bubble.own { align-self: flex-end; color: white; background: var(--brand-600); border-bottom-right-radius: 4px; }
+.message-bubble.theirs { align-self: flex-start; color: var(--gray-800); background: var(--gray-100); border-bottom-left-radius: 4px; }
+.message-bubble p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.5; }
+.message-bubble time { display: block; margin-top: 5px; font-size: 10px; opacity: .72; text-align: right; }
+.messages-compose { padding: 12px 18px 14px; border-top: 1px solid var(--gray-100); }
+.messages-compose textarea { display: block; width: 100%; min-height: 54px; resize: vertical; padding: 10px 12px; color: var(--gray-800); background: white; border: 1px solid var(--gray-200); border-radius: var(--radius-md); font: inherit; }
+.messages-compose textarea:focus, .provider-contact-form textarea:focus { outline: 2px solid var(--brand-200); border-color: var(--brand-500); }
+.messages-compose-footer, .provider-contact-submit { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 9px; }
+.messages-compose-footer > span, .provider-contact-submit > span { color: var(--gray-400); font-size: 12px; }
+.messages-compose-footer .btn { display: inline-flex; align-items: center; gap: 8px; }
+.provider-contact { margin-top: 10px; }
+.provider-contact > .btn { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.provider-contact-form { display: grid; gap: 8px; margin-top: 12px; padding: 14px; background: var(--gray-50); border: 1px solid var(--gray-100); border-radius: var(--radius-md); }
+.provider-contact-form label { color: var(--gray-700); font-size: 13px; font-weight: 600; }
+.provider-contact-form textarea { width: 100%; resize: vertical; padding: 10px; border: 1px solid var(--gray-200); border-radius: var(--radius-sm); font: inherit; }
+.provider-contact-submit .btn { padding: 8px 12px; }
+.report-dialog-backdrop { position: fixed; inset: 0; z-index: 1100; display: grid; place-items: center; overflow-y: auto; padding: 20px; background: rgba(15, 23, 42, .58); }
+.report-dialog { display: grid; width: min(100%, 500px); gap: 12px; padding: 24px; background: white; border: 1px solid var(--gray-100); border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); }
+.report-dialog-heading { display: flex; align-items: center; justify-content: space-between; }
+.report-dialog-heading > span { display: grid; width: 40px; height: 40px; place-items: center; color: #9f1239; background: #fff1f2; border-radius: 50%; }
+.report-dialog-heading > button { width: 34px; height: 34px; color: var(--gray-500); background: transparent; border: 0; font-size: 26px; cursor: pointer; }
+.report-dialog h2 { margin: 0; color: var(--gray-900); font-size: 21px; }
+.report-dialog > p { margin: -5px 0 4px; color: var(--gray-600); font-size: 13px; line-height: 1.55; }
+.report-dialog > label { margin-top: 3px; color: var(--gray-700); font-size: 13px; font-weight: 600; }
+.report-dialog select, .report-dialog textarea { width: 100%; padding: 10px 12px; color: var(--gray-800); background: white; border: 1px solid var(--gray-200); border-radius: var(--radius-md); font: inherit; }
+.report-dialog textarea { resize: vertical; }
+.report-dialog select:focus, .report-dialog textarea:focus { outline: 2px solid var(--brand-100); border-color: var(--brand-500); }
+.report-description-count { margin-top: -8px; color: var(--gray-400); font-size: 11px; text-align: right; }
+.report-dialog-actions { display: flex; justify-content: flex-end; gap: 9px; margin-top: 6px; }
+@media (max-width: 700px) {
+  .messages-page { padding: 26px 0 40px; }
+  .messages-layout { grid-template-columns: 1fr; grid-template-rows: minmax(130px, 32%) 1fr; height: calc(100vh - 230px); min-height: 500px; }
+  .messages-inbox { display: block; border-right: 0; border-bottom: 1px solid var(--gray-100); }
+  .messages-history { padding: 16px; }
+  .messages-thread-heading { gap: 8px; padding: 12px; }
+  .messages-thread-actions { gap: 6px; }
+  .messages-delete-button, .messages-report-button { gap: 4px; padding: 6px 8px; font-size: 11px; }
+}

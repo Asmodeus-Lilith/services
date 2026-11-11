@@ -1,0 +1,59 @@
+/* pages/NotFound.css */
+.notfound-page {
+  padding: var(--space-16) 0 var(--space-20);
+}
+
+.notfound-card {
+  max-width: 520px;
+  margin: 0 auto;
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-16) var(--space-10);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-100);
+}
+
+.notfound-code {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: var(--space-4);
+  color: var(--brand-600);
+  letter-spacing: -0.03em;
+}
+
+.notfound-title {
+  font-size: 1.5rem;
+  color: var(--gray-900);
+  margin-bottom: var(--space-3);
+  font-weight: 700;
+}
+
+.notfound-text {
+  color: var(--gray-500);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-8);
+}
+
+.notfound-actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+  .notfound-card {
+    padding: var(--space-10) var(--space-6);
+  }
+
+  .notfound-code {
+    font-size: 3.5rem;
+  }
+
+  .notfound-actions .btn {
+    width: 100%;
+  }
+}

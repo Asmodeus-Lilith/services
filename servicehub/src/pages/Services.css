@@ -1,0 +1,201 @@
+/* pages/Services.css */
+.services-page {
+  padding: var(--space-10) 0 var(--space-20);
+}
+
+.services-header {
+  margin-bottom: var(--space-10);
+}
+
+.services-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-10);
+}
+
+/* Sidebar */
+.filters-sidebar {
+  background: white;
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-section {
+  margin-bottom: var(--space-6);
+}
+
+.filter-section h3 {
+  font-size: 14px;
+  color: var(--gray-800);
+  margin-bottom: var(--space-4);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--brand-500);
+  background: white;
+}
+
+/* The filter card already supplies a border around the search field, so the
+   input must not add a second one. Flat at rest, single border on focus. */
+.filters-sidebar .search-input {
+  background: var(--gray-100);
+  border-color: transparent;
+}
+
+.filters-sidebar .search-input:focus {
+  background: white;
+  border-color: var(--brand-500);
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--gray-600);
+}
+
+.filter-option input {
+  accent-color: var(--brand-600);
+}
+
+.filter-count {
+  margin-left: auto;
+  background: var(--gray-100);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.price-inputs input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+.price-inputs input:focus {
+  outline: none;
+  border-color: var(--brand-500);
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: var(--space-4);
+}
+
+/* Services Content */
+.services-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.results-count {
+  color: var(--gray-500);
+  font-size: 14px;
+}
+
+.sort-select {
+  padding: 8px 14px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  color: var(--gray-600);
+  cursor: pointer;
+  background: white;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: var(--brand-500);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.no-results {
+  text-align: center;
+  padding: var(--space-20) var(--space-5);
+}
+
+.no-results-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: var(--gray-100);
+  border-radius: 50%;
+  margin: 0 auto var(--space-5);
+  color: var(--gray-400);
+}
+
+.no-results h3 {
+  color: var(--gray-800);
+  margin-bottom: var(--space-2);
+}
+
+.no-results p {
+  color: var(--gray-500);
+  margin-bottom: var(--space-6);
+}
+
+@media (max-width: 992px) {
+  .services-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .services-toolbar {
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: stretch;
+  }
+}
